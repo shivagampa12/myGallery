@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const purchaseForm = document.getElementById("purchase-form");
+            purchaseForm.addEventListener("submit", function (event) {
+                if (!purchaseForm.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                purchaseForm.classList.add("validated-form");
+            });
+        });
+    </script>
+    <style>
+        .wrapper-box {
+            max-width: 620px;
+            margin: 25px auto;
+            padding: 22px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container wrapper-box">
+    <form id="purchase-form" novalidate>
+        <h2>User Information</h2>
+        <div class="row gap-3">
+            <div class="col-md-6">
+                <label class="label-text">First Name</label>
+                <input type="text" class="text-input" placeholder="Input first name" required />
+                <div class="alert-message">First name is required.</div>
+            </div>
+            <div class="col-md-6">
+                <label class="label-text">Last Name</label>
+                <input type="text" class="text-input" placeholder="Input last name" required />
+                <div class="alert-message">Last name is required.</div>
+            </div>
+            <div class="col-12">
+                <label class="label-text">Email Address (Optional)</label>
+                <input type="email" class="text-input" placeholder="sample@mail.com" />
+                <div class="alert-message">Enter a valid email.</div>
+            </div>
+            <div class="col-12">
+                <label class="label-text">Home Address</label>
+                <input type="text" class="text-input" placeholder="789 Oak Avenue" required />
+                <div class="alert-message">Address is required.</div>
+            </div>
+            <div class="col-md-5">
+                <label class="label-text">Country</label>
+                <select class="select-menu" required>
+                    <option value="">Pick one...</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+                </select>
+                <div class="alert-message">Select a country.</div>
+            </div>
+            <div class="col-md-4">
+                <label class="label-text">Region</label>
+                <select class="select-menu" required>
+                    <option value="">Pick one...</option>
+                    <option>Florida</option>
+                    <option>Ohio</option>
+                    <option>Illinois</option>
+                </select>
+                <div class="alert-message">Choose a region.</div>
+            </div>
+            <div class="col-md-3">
+                <label class="label-text">Zip Code</label>
+                <input type="text" class="text-input" placeholder="98765" required />
+                <div class="alert-message">Zip code is required.</div>
+            </div>
+        </div>
+
+        <h2 class="mt-4">Payment Information</h2>
+        <div class="row gap-3">
+            <div class="col-12">
+                <div class="payment-choice">
+                    <input type="radio" class="radio-input" name="paymentMode" id="credit-card" checked>
+                    <label class="radio-label" for="credit-card">Credit</label>
+                </div>
+                <div class="payment-choice">
+                    <input type="radio" class="radio-input" name="paymentMode" id="debit-card">
+                    <label class="radio-label" for="debit-card">Debit</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <label class="label-text">Card Holder Name</label>
+                <input type="text" class="text-input" placeholder="Name on the card" required />
+                <div class="alert-message">Cardholder name required.</div>
+            </div>
+            <div class="col-12">
+                <label class="label-text">Card Number</label>
+                <input type="text" class="text-input" placeholder="0000 1111 2222 3333" pattern="\d{16}" required />
+                <div class="alert-message">Provide a valid 16-digit number.</div>
+            </div>
+            <div class="col-md-6">
+                <label class="label-text">Expiration Date</label>
+                <input type="text" class="text-input" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])/[0-9]{2}" required />
+                <div class="alert-message">Format MM/YY.</div>
+            </div>
+            <div class="col-md-6">
+                <label class="label-text">CVV</label>
+                <input type="text" class="text-input" placeholder="456" pattern="\d{3}" required />
+                <div class="alert-message">Provide a 3-digit code.</div>
+            </div>
+            <div class="col-12 mt-4">
+                <button class="submit-btn" type="submit">Submit Payment</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

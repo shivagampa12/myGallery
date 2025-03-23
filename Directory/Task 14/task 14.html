@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pet Record Manager</title>
+  <link rel="stylesheet" href="task14.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Pet Record Manager</h1>
+
+    <div class="form-inputs">
+      <input type="text" id="petName" placeholder="Pet Name" />
+      <input type="text" id="species" placeholder="Species" />
+      <input type="text" id="breed" placeholder="Breed" />
+      <input type="number" id="age" placeholder="Age" />
+      <input type="text" id="color" placeholder="Color" />
+      <input type="text" id="owner" placeholder="Owner Name" />
+    </div>
+
+    <div class="actions">
+      <button class="btn add" onclick="addPet()">Add</button>
+      <button class="btn clear" onclick="resetForm()">Clear Form</button>
+      <button class="btn add" onclick="showPets()">Show All</button>
+      <button class="btn clear" onclick="clearList()">Clear List</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchPet" placeholder="Search by Pet Name" />
+      <button onclick="searchPet()">Search</button>
+    </div>
+
+    <div id="petList"></div>
+  </div>
+
+  <script src="task 14.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 6: GitHub Integration</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #2d3b45;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 210px;
+      background-color: #f8f8f8;
+      padding: 20px 10px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h4 {
+      font-size: 13px;
+      margin-top: 0;
+      color: #333;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #d32222;
+      font-size: 14px;
+      text-decoration: none;
+      margin: 8px 0;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar a strong {
+      color: black;
+    }
+
+    /* Main content */
+    .main {
+      flex-grow: 1;
+      padding: 30px;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .task-title {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .dropdown-feedback {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    select {
+      padding: 6px;
+      font-size: 14px;
+    }
+
+    .feedback {
+      display: flex;
+      align-items: center;
+      color: green;
+      font-weight: bold;
+    }
+
+    .circle {
+      width: 16px;
+      height: 16px;
+      background-color: green;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    .score-box {
+      text-align: right;
+    }
+
+    .score-box .score {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .score-box button {
+      padding: 4px 8px;
+      font-size: 13px;
+      border: 1px solid #aaa;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .label {
+      font-size: 13px;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    .unlimited {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .info-small {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      margin-top: 15px;
+      border-left: 4px solid #ccc;
+      padding-left: 15px;
+    }
+
+    .details p {
+      margin-top: 0;
+    }
+
+    .details ul {
+      padding-left: 18px;
+    }
+
+    .details ul li {
+      margin-bottom: 10px;
+    }
+
+    .pdf-link {
+      color: #d32222;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .pdf-link:hover {
+      text-decoration: underline;
+    }
+
+    .gray-box {
+      background-color: #f6f8f9;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 30px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    .gray-box a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .gray-box a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding-bottom: 30px;
+    }
+
+    .footer button {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h4>Spring 2025 Full Term</h4>
+      <a href="#">Home</a>
+      <a href="#">Announcements</a>
+      <a href="#">Syllabus</a>
+      <a href="#">Modules</a>
+      <a href="#"><strong>Assignments</strong></a>
+      <a href="#">Quizzes</a>
+      <a href="#">Discussions</a>
+      <a href="#">Grades <span style="color: black;">● 9</span></a>
+      <a href="#">People</a>
+      <a href="#">Office 365</a>
+      <a href="#">Kaltura Course Gallery</a>
+      <a href="#">RedShelf Course Materials</a>
+      <a href="#">Lucid (Whiteboard)</a>
+      <a href="#">Class Notebook</a>
+      <a href="#">ATI</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+      <div class="top-row">
+        <div>
+          <div class="task-title">Task 6: GitHub Integration</div>
+          <div class="dropdown-feedback">
+            <select>
+              <option>Attempt 1</option>
+            </select>
+            <div class="feedback">
+              <div class="circle"></div>
+              Review Feedback <span style="margin-left: 5px;">SUBMITTED: 7 Feb 2025 23:58</span>
+            </div>
+          </div>
+        </div>
+        <div class="score-box">
+          <div class="score">20/20</div>
+          <button>Add comment</button>
+          <div class="label">Anonymous grading: <strong>no</strong></div>
+        </div>
+      </div>
+
+      <div class="unlimited">Unlimited Attempts Allowed</div>
+      <div class="info-small">Available until 14 Feb 2025 23:59</div>
+
+      <div class="details">
+        <h3>Details</h3>
+        <p>
+          In this assignment, you will demonstrate that you have completed the initial GitHub account setup.
+          You can leverage the slides to complete the task:
+          <a class="pdf-link" href="#">week2_version_control.pdf</a>
+        </p>
+        <p>You will need to complete the following in this task to get the full credits:</p>
+        <ul>
+          <li>Create and setup your GitHub account</li>
+          <li>Create a new repository for the class assignments in this course
+            <ul>
+              <li>Either create a public repository or</li>
+              <li>Collaborate with <a href="https://github.com/aum-web-app" target="_blank">https://github.com/aum-web-app</a></li>
+            </ul>
+          </li>
+          <li>Pull the repository to your local machine</li>
+          <li>Create a branch for Task 5: Calculator assignment</li>
+          <li>Checkout to the newly created branch</li>
+          <li>Copy <strong>Task 5 (Calculator)</strong> files in your local repository</li>
+          <li>Stage all changes</li>
+          <li>Push changes to remote with appropriate commit message</li>
+          <li>Make pull request and accept merge request</li>
+          <li>Submit your <strong>repository URL and commit ID (Task 5 merge)</strong> in Canvas</li>
+          <li>Checkout to the master branch</li>
+        </ul>
+      </div>
+
+      <div class="gray-box">
+        <p>commit 39cb35d44a6f1561a6478e9fcfbef76b88b8d267</p>
+        <p><a href="https://github.com/sgampa2/sgampa.git" target="_blank">https://github.com/sgampa2/sgampa.git</a></p>
+      </div>
+
+      <div class="footer">
+        <div></div>
+        <button>Next ></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

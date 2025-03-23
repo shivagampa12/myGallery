@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #y{
+            display: inline-block;
+            width: 20rem;
+            height: 3rem;
+            border: dotted black;
+        }
+        #t{
+            display: inline-block;
+            width: 20rem;
+            height: 3rem;
+            border: dotted black;
+        }
+    </style>
+    <script>
+        function Upper() {
+            var x = document.getElementById("y");
+            var y = document.getElementById("t");
+            y.value = x.value.toUpperCase();
+        }
+    </script>
+
+</head>
+<body>
+   
+    <input type="text" placeholder="Shiva" id="y" onkeyup="Upper()">
+    <input type="text" placeholder="SHIVA" id="t" disabled><br><br>
+</body>
+</html>
